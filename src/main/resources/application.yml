@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://ec2-35-168-54-239.compute-1.amazonaws.com/db3t6puven57c9
+    username: uwfpjcxnxrgpju
+    password: fde808982467f13a0f26e79cc6cc6487ae600434679d9180b5d343901dfcdc8c
+  jpa:
+    show-sql: true
+    properties.hibernate.jdbc.lob.non_contextual_creation: true
+security:
+  oauth2.resource.filter-order: 3
+  signing-key: MaYzkSjmkzPC57L
+  encoding-strength: 256
+  security-realm: Spring security
+  jwt:
+    client-id: testjwtclientid
+    client-secret: XY7kmzoNzl100
+    grant-type: password
+    scope-read: read
+    scope-write: write
+    resource-ids: jwtresourceid
+jwt:
+  secret: myKeySecret
+  expiration: 604800
+  header: Authorization
+  authorities-key: scopes
+  prefix: Bearer
+config:
+  days-rent: 7
+  penality: 5
